@@ -1,0 +1,99 @@
+{
+  "$schema": "../.hmiframework/Schema/ControlDescription.Schema.json",
+  "apiVersion": 1,
+  "name": "test_frameworkControl",
+  "namespace": "TcHmi.Controls.test_framework",
+  "displayName": "test_frameworkControl",
+  "version": {
+    "full": "1.0.0.0",
+    "major": 1,
+    "minor": 0,
+    "revision": 0,
+    "build": 0
+  },
+  "visible": true,
+  "themeable": "Standard",
+  "base": "TcHmi.Controls.System.TcHmiControl",
+  "description": "This description text will be used as a Tooltip in Visual Studio.",
+  "properties": {
+    "containerControl": false,
+    "geometry": {
+      "width": 150,
+      "height": 150
+    }
+  },
+  "template": "Template.html",
+  "icons": [
+    {
+      "name": "Icons/16x16.png",
+      "width": 16,
+      "height": 16
+    }
+  ],
+  "dependencyFiles": [
+    {
+      "name": "test_frameworkControl.js",
+      "type": "JavaScript",
+      "description": "Contains all the main logic."
+    },
+    {
+      "name": "Style.css",
+      "type": "Stylesheet",
+      "description": "Theme independent style"
+    }
+  ],
+    "themes":
+    {
+        "Base":
+        {
+            "resources":
+            [
+                {
+                    "name": "Themes/Base/Style.css",
+                    "type": "Stylesheet",
+                    "description": "Theme dependent style"
+                }
+            ]
+        },
+        "Base-Dark":
+        {
+            "resources":
+            [
+                {
+                    "name": "Themes/Base-Dark/Style.css",
+                    "type": "Stylesheet",
+                    "description": "Theme dependent style"
+                }
+            ]
+        }
+    },
+  "attributes": [
+  
+  {
+   "name": "data-tchmi-bool-value",
+      "displayName": "boolValue",
+      "propertyName": "boolValue",
+      "propertySetterName": "setboolValue",
+      "propertyGetterName": "getboolValue",
+      "visible": true,
+      "type": "tchmi:general#/definitions/Boolean",
+      "category": "General",
+      "description": "This is a boolean attribute.",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "heritable": false,
+      "defaultValue": null,
+      "defaultValueInternal": true
+  }
+]
+
+  ,
+  "attributeCategories": [],
+  "functions": [],
+  "events": [],
+  "dataTypes": [
+    {
+      "schema": "Schema/Types.Schema.json"
+    }
+  ]
+}

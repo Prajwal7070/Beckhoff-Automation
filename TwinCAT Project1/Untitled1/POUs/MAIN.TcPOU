@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="MAIN" Id="{5f4c501d-1908-4838-b2d1-d152446867ae}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+    {attribute 'TcHmiSymbol' := 'true'}
+    bColorState : BOOL := TRUE;
+    nCounter : INT := 0;
+END_VAR
+
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+nCounter := nCounter + 1;
+
+IF nCounter > 1000 THEN
+    bColorState := NOT bColorState;
+    nCounter := 0;
+END_IF;
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="91" Count="0" />
+      <LineId Id="76" Count="6" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

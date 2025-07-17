@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "definitions": {
+    "TcHmi.Controls.test_framework.test_frameworkControl": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "test_frameworkControl",
+      "frameworkControlNamespace": "TcHmi.Controls.test_framework"
+    }
+  }
+}

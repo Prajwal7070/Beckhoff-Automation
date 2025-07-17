@@ -86,6 +86,10 @@
   },
   "packages": [
     {
+      "name": "test_framework",
+      "basePath": "/test_framework"
+    },
+    {
       "name": "Beckhoff.TwinCAT.HMI.Controls",
       "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
     },
